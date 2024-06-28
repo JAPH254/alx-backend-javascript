@@ -23,3 +23,15 @@ export default class Building {
     throw new Error('Class extending Building must override evacuationWarningMessage');
   }
 }
+
+// Example of a subclass that extends Building and implements the evacuationWarningMessage method
+class OfficeBuilding extends Building {
+  evacuationWarningMessage() {
+    return 'Please evacuate the office building immediately!';
+  }
+}
+
+// Usage example
+const office = new OfficeBuilding(5000);
+console.log(office.sqft); // 5000
+console.log(office.evacuationWarningMessage()); // 'Please evacuate the office building immediately!'
